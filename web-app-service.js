@@ -2,28 +2,22 @@
 // here's a great resource on service workers: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
 // here's where I basically copy and pasted the code for this service worker: https://airhorner.com/sw.js
 
-self.addEventListener("activate",  function(event) {
+// self.addEventListener("activate",  function(event) {
 
-  event.waitUntil(self.clients.claim().then(function() {
+//   event.waitUntil(self.clients.claim().then(function() {
 
-    self.skipWaiting();
+//     self.skipWaiting();
 
-  }));
+//   }));
 
-});
+// });
 
-self.addEventListener("fetch", function(event) {
-
-  event.respondWith(caches.match(event.request).then(function(response) {
-
-    if (response && response.ok) {
-
-      return response;
-
-    }
-
-  }));
-
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
 });
 
 
