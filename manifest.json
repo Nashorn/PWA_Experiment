@@ -3,7 +3,7 @@
   "author": "PoP Vlog",
   "background_color": "#000000",
   "description": "A simple Progressive Web Application",
-  "display": "fullscreen",
+  "display": "standalone",
   "prefer_related_applications": true,
   
   "icons": [
@@ -20,9 +20,8 @@
   ],
 
   "lang": "en-US",
-  "name": "Offline Web App",
+  "name": "Web App",
   "orientation": "portrait",
-  "scope": "./",
   "short_name": "Web App",
   "start_url": "web-app.html",
   "theme_color": "#0099ff",
