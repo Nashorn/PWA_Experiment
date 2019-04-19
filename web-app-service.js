@@ -32,7 +32,7 @@ self.addEventListener('install', function(event) {
     caches.open("web-app").then(function(cache) {
       return cache.addAll(
         [
-          "/", "manifest.json", "web-app.css", "web-app.html", "web-app.png", "web-app512.png"
+          "manifest.json", "web-app.css", "web-app.html", "web-app.png", "web-app512.png"
         ]
       );
     })
