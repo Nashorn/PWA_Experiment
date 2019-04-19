@@ -1,0 +1,19 @@
+{
+    "name": "simpleserver",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "author": "",
+    "license": "MIT",
+    "scripts": {
+        "start": "node node_modules/od-server/main.js",
+        "seam": "node node_modules/od-toolset/tools/seam.js"
+    },
+    "dependencies": {
+
+    },
+    "devDependencies": {
+        "od-server": "github:Nashorn/od-server#1.0.0",
+        "od-toolset": "github:Nashorn/od-toolset#1.4.0"
+    }
+}
